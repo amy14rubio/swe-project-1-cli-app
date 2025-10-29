@@ -52,7 +52,9 @@ let currentChoices = [];
 
 const scoreCalc = () => (currentScore / totalQuestions) * 100;
 
-const randomizeQuestions = () => {};
+const randomizeQuestions = () => {
+  answerChoices.sort(() => (Math.random() - 0.5) * 4);
+};
 
 const randomizeChoices = (i) => {
   let randomChoices = [...answerChoices[i].choices];
@@ -96,4 +98,10 @@ const quizEndMessage = () => {
   console.log(`Thanks for playing!! \n`);
 };
 
-module.exports = { printQuestions, feedback, quizEndMessage, scoreCalc };
+module.exports = {
+  printQuestions,
+  feedback,
+  quizEndMessage,
+  scoreCalc,
+  randomizeQuestions,
+};

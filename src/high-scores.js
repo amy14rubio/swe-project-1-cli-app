@@ -3,26 +3,6 @@ const { scoreCalc, quizEndMessage } = require("./quiz.js");
 let highScore = [
   {
     name: "Player1",
-    score: 100,
-    date: `10/24/25`,
-  },
-  {
-    name: "Player2",
-    score: 50,
-    date: `10/24/25`,
-  },
-  {
-    name: "Player3",
-    score: 30,
-    date: `10/24/25`,
-  },
-  {
-    name: "Player4",
-    score: 20,
-    date: `10/24/25`,
-  },
-  {
-    name: "Player5",
     score: 10,
     date: `10/24/25`,
   },
@@ -45,6 +25,8 @@ const printHighScore = () => {
   console.log(`\n`);
 };
 
+const isTopFive = () => highScore.some((user) => scoreCalc() > user.score);
+
 const highScoreAtQuizEnd = (user) => {
   const index = highScore.findIndex((player) => player.name === user);
   if (index !== -1) {
@@ -62,7 +44,6 @@ const highScoreAtQuizEnd = (user) => {
 
   highScore.sort((a, b) => b.score - a.score);
   highScore = highScore.slice(0, 5);
-  quizEndMessage();
 };
 
-module.exports = { printHighScore, highScoreAtQuizEnd };
+module.exports = { printHighScore, highScoreAtQuizEnd, isTopFive };
