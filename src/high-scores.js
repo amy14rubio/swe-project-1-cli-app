@@ -1,4 +1,4 @@
-const { scoreCalc, quizEndMessage } = require("./quiz.js");
+const { scoreCalc } = require("./quiz.js");
 
 let highScore = [
   {
@@ -18,10 +18,9 @@ const formattedDate = () => {
 
 const printHighScore = () => {
   console.log(`Highscores:`);
-  for (user of highScore) {
-    const index = highScore.findIndex((player) => player.name === user.name);
-    console.log(`${index + 1}. ${user.score} (${user.name}) — ${user.date}`);
-  }
+  highScore.forEach((user, i) =>
+    console.log(`${i + 1}. ${user.score} (${user.name}) — ${user.date}`)
+  );
   console.log(`\n`);
 };
 

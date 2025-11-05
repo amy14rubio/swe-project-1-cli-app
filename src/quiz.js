@@ -1,48 +1,43 @@
 const answerChoices = [
   {
-    question: `How many words for “snow” does Scotland have?`,
-    choices: [`50`, `100`, `900`, `421`],
+    question: `What is 5 + 3?`,
+    choices: [`6`, `7`, `9`, `8`],
   },
   {
-    question: `What food never spoils, even after thousands of years?`,
-    choices: [`Salt`, `Rice`, `Vinegar`, `Honey`],
+    question: `What is 10 - 4?`,
+    choices: [`5`, `8`, `7`, `6`],
   },
   {
-    question: `Which of these fruits is actually a berry?`,
-    choices: [`Strawberry`, `Raspberry`, `Blueberry`, `Banana`],
+    question: `What is 7 × 2?`,
+    choices: [`12`, `13`, `15`, `14`],
   },
   {
-    question: `What animal’s fingerprints are so similar to humans’ they can confuse crime scene investigators?`,
-    choices: [`Raccoon`, `Monkey`, `Panda`, `Koala`],
+    question: `What is 16 ÷ 4?`,
+    choices: [`3`, `6`, `5`, `4`],
   },
   {
-    question: `What animal can sleep for up to three years?`,
-    choices: [`Bear`, `Sloth`, `Snake`, `Snail`],
+    question: `What is 9 + 6?`,
+    choices: [`14`, `13`, `16`, `15`],
   },
   {
-    question: `What food item was once used as currency in ancient civilizations?`,
-    choices: [`Tea`, `Rice`, `Sugar`, `Cocoa beans`],
+    question: `What is 12 - 5?`,
+    choices: [`6`, `8`, `9`, `7`],
   },
   {
-    question: `How long is the longest song ever written?`,
-    choices: [`100 years`, `500 years`, `5 years`, `1,000 years`],
+    question: `What is 3 × 5?`,
+    choices: [`12`, `13`, `14`, `15`],
   },
   {
-    question: `What is the only king in a standard deck of cards without a mustache?`,
-    choices: [
-      `King of Diamonds`,
-      `King of Spades`,
-      `King of Clubs`,
-      `King of Hearts`,
-    ],
+    question: `What is 20 ÷ 5`,
+    choices: [`3`, `5`, `6`, `4`],
   },
   {
-    question: `What is the most sold board game of all time?`,
-    choices: [`Scrabble`, `Chess`, `Checkers`, `Monopoly`],
+    question: `What is 8 + 7?`,
+    choices: [`14`, `16`, `13`, `15`],
   },
   {
-    question: `Which board game was originally created to teach children about the dangers of capitalism?`,
-    choices: [`The Game of Life`, `Backgammon`, `Sorry!`, `Monopoly`],
+    question: `What is 15 - 9?`,
+    choices: [`5`, `7`, `8`, `6`],
   },
 ];
 
@@ -86,10 +81,14 @@ const feedback = (i, userAnswer) => {
     );
   } else {
     console.log(`Incorrect!! \n`);
+    console.log(
+      `Current Score: ${currentScore}/${totalQuestions} (${scoreCalc()}%) \n`
+    );
   }
 };
 
 const quizEndMessage = () => {
+  console.clear();
   console.log(`The quiz has ended!`);
   console.log(
     `Final Score: ${currentScore}/${totalQuestions} (${scoreCalc()}%)`

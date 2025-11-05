@@ -1,11 +1,10 @@
-const { showMenu } = require("./menu.js");
+const { showMenu } = require("./menu");
 
 // This is the main entry point for the application.
 const startApp = () => {
   console.clear();
-  console.log("\nWelcome to THE MOST RANDOM QUIZ YOU WILL FIND!\n");
+  console.log("\nWelcome to a simple math quiz\n");
   showMenu();
-  console.log("Bye bye ❤︎");
 };
 
 startApp();
