@@ -15,18 +15,8 @@ createInterface();
 
 const ask = (query) => new Promise((resolve) => rl.question(query, resolve));
 
-const {
-  printQuestions,
-  feedback,
-  quizEndMessage,
-  randomizeQuestions,
-} = require("./quiz.js");
-
-const {
-  printHighScore,
-  highScoreAtQuizEnd,
-  isTopFive,
-} = require("./high-scores.js");
+const Quiz = require("./quiz-class.js");
+const mathQuiz = require("./quizzes.js");
 
 const showMenu = async () => {
   let isRunning = true;
@@ -39,12 +29,14 @@ const showMenu = async () => {
     const menuChoice = prompt("Please choose an option (1-3): ").trim();
 
     if (menuChoice === "1") {
-      randomizeQuestions(); //each quiz starts with random questions
+      mathQuiz.randomizeQuestions(); //each quiz starts with random questions
       console.clear();
       let questionCounter = 0;
+      let score = 0;
 
       while (questionCounter < 10) {
-        printQuestions(questionCounter); //prints quiz questions
+        const randomChoiceArr = mathQuiz.randomizeChoices(questionCounter);
+        mathQuiz.printQuestions(questionCounter, randomChoiceArr); //prints quiz questions
 
         //sets a timer
         const timerPromise = new Promise((resolve) => {
@@ -61,8 +53,13 @@ const showMenu = async () => {
 
           if (answer === "timeout") {
             console.clear();
-            console.log("\n⏰ Timer's up!\n");
-            feedback(questionCounter, null);
+            console.log("⏰ Timer's up!\n");
+            score = mathQuiz.feedback(
+              questionCounter,
+              null,
+              randomChoiceArr,
+              score
+            );
             rl.close(); //closes readline interface
             rl = null; //defines rl to avoid bugs
             questionCounter++; //allows next question to be printed
@@ -77,21 +74,26 @@ const showMenu = async () => {
 
           // valid answer
           console.clear();
-          feedback(questionCounter, answer);
+          score = mathQuiz.feedback(
+            questionCounter,
+            answer,
+            randomChoiceArr,
+            score
+          );
           rl.close(); //closes readline interface
           rl = null; //defines rl to avoid bugs
           questionCounter++; //allows next question to be printed
           break; // goes to next question
         }
       }
-      if (isTopFive()) {
+      if (mathQuiz.isTopFive()) {
         let user = prompt(`What's your name?: `);
-        highScoreAtQuizEnd(user); //adds user's score to high scores
+        mathQuiz.highScoreAtQuizEnd(user); //adds user's score to high scores
       }
-      quizEndMessage();
+      mathQuiz.quizEndMessage();
     } else if (menuChoice === "2") {
       console.clear();
-      printHighScore();
+      Quiz.printHighScore();
     } else if (menuChoice === "3") {
       createInterface();
       rl.close();
