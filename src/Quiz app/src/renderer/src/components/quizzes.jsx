@@ -1,6 +1,5 @@
-const Quiz = require("./quiz-class.js");
 
-const mathQuizChoices = [
+const mathQuiz = [
   {
     question: `What is 5 + 3?`,
     choices: [`6`, `7`, `9`, `8`],
@@ -43,7 +42,7 @@ const mathQuizChoices = [
   },
 ];
 
-const boardGameQuizChoices = [
+const boardGameQuiz = [
   {
     question: `In Monopoly, which property is the most expensive?`,
     choices: [`Park Place`, `Marvin Gardens`, `Baltic Avenue`, `Boardwalk`],
@@ -70,12 +69,7 @@ const boardGameQuizChoices = [
   },
   {
     question: `What is the only king in a standard deck of cards without a mustache?`,
-    choices: [
-      `King of Diamonds`,
-      `King of Spades`,
-      `King of Clubs`,
-      `King of Hearts`,
-    ],
+    choices: [`King of Diamonds`, `King of Spades`, `King of Clubs`, `King of Hearts`],
   },
   {
     question: `In Uno, which card can reverse the order of play?`,
@@ -91,7 +85,7 @@ const boardGameQuizChoices = [
   },
 ];
 
-const animalFunFactsQuizChoices = [
+const animalQuiz = [
   {
     question: `What animal’s fingerprints are so similar to humans’ they can confuse crime scene investigators?`,
     choices: [`Raccoon`, `Monkey`, `Panda`, `Koala`],
@@ -134,8 +128,6 @@ const animalFunFactsQuizChoices = [
   },
 ];
 
-const mathQuiz = new Quiz("Math", mathQuizChoices);
-const boardQuiz = new Quiz("Board game", boardGameQuizChoices);
-const animalQuiz = new Quiz("Animal fun facts", animalFunFactsQuizChoices);
 
-module.exports = { mathQuiz, boardQuiz, animalQuiz };
+
+export {mathQuiz, animalQuiz, boardGameQuiz}

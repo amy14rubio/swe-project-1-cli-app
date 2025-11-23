@@ -1,0 +1,40 @@
+@import './base.css';
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+button {
+  padding: 5px;
+  margin: 10px;
+  background-color: transparent;
+  border-color: white;
+}
+
+h1 {
+  size: 50px;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 620px) {
+  .versions {
+    display: none;
+  }
+}
+
+@media (max-width: 350px) {
+  .tip,
+  .actions {
+    display: none;
+  }
+}
