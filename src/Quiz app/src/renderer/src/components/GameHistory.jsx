@@ -14,21 +14,35 @@ const [gameHistory, setGameHistory] = useState(null);
   if (gameHistory === null) return <div>Loading game history...</div>;
 
   return (
-    <>
-      <h1>Game History ⁺⋆ ࿔</h1>
-      <div>{gameHistory.length > 0 ? (
-        <div>
-          {gameHistory.map((user, i) => (
-            <div key={`${user.quizType}-${i}`}>
-              {user.date} — {user.quizType} — {user.score}
-            </div>
-          ))}
-        </div>
+    <div className="w-screen">
+      <h1 className="text-4xl">Game History ⁺⋆ ࿔</h1>
+
+      <div style={{scrollbarWidth: 'none',
+        WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)",
+         WebkitMaskRepeat: "no-repeat",
+          WebkitMaskSize: "100% 100%",
+          maskImage: "linear-gradient(to bottom, transparent 0%, black 11%, black 89%, transparent 100%)",
+          maskRepeat: "no-repeat",
+          maskSize: "100% 100%",
+      }} 
+        className="
+        text-2xl text-center w-full h-[12em] pt-[20px] pb-[10px] 
+        overflow-auto flow-root">
+        {gameHistory.length > 0 ? (
+          <div className="flex p-4">
+            {gameHistory.toReversed().map((user, i) => (
+              <div className="highlight flex pl-12 pr-12 pt-0 py-2" key={`${user.quizType}-${i}`}>
+                {user.score} • {user.quizType} • {user.date}
+              </div>
+            ))}
+          </div>
       ) : (
         <div>No game history yet</div>
       )} </div>
-      <button onClick={() => setScreen("home")}>Back home</button>
-    </>
+
+
+      <button className="text-2xl mt-4" onClick={() => setScreen("home")}>Back home</button>
+    </div>
      );
 }
 

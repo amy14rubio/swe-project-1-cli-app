@@ -1,18 +1,6 @@
 [
   {
-    "name": "player",
-    "quizType": "animal",
-    "score": 50,
-    "date": "11/22/25"
-  },
-  {
-    "name": "player",
-    "quizType": "math",
-    "score": 20,
-    "date": "11/22/25"
-  },
-  {
-    "name": "Player1",
+    "name": "player1",
     "quizType": "first quiz!",
     "score": 10,
     "date": "10/24/25"
