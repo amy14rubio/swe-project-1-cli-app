@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { animalQuiz, boardGameQuiz, mathQuiz } from './quizzes'
+import { animalQuiz, boardGameQuiz, mathQuiz, classicalMusicQuiz } from './quizzes'
 import { motion } from 'framer-motion'
 import { useRef } from 'react'
 
@@ -77,6 +77,15 @@ function Popup({ setQuizType, setQuizName, setMode, setShowPopup, onStart }) {
             }}
           >
             Board Games
+          </button>
+          <button
+            onClick={() => {
+              setQuizType(classicalMusicQuiz)
+              setQuizName('classical music')
+              setPopupScreen(1)
+            }}
+          >
+            Classical Music
           </button>
         </div>
       )}

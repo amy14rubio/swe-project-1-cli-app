@@ -128,6 +128,48 @@ const animalQuiz = [
   },
 ];
 
+const classicalMusicQuiz = [
+  {
+    question: `What is the term for a recurring musical idea associated with a character or theme?`,
+    choices: [`Ostinato`, `Motif`, `Cantus firmus`, `Leitmotif`],
+  },
+  {
+    question: `Which instrument family does the violin belong to?`,
+    choices: [`Woodwind`, `Brass`, `Percussion`, `String`],
+  },
+  {
+    question: `Which composer is most strongly associated with the Romantic period?`,
+    choices: [`Haydn`, `Mozart`, `Bach`, `Chopin`],
+  },
+  {
+    question: `Who composed "Eine kleine Nachtmusik"?`,
+    choices: [`Bach`, `Haydn`, `Beethoven`, `Mozart`],
+  },
+  {
+    question: `What does the musical term "piano" mean?`,
+    choices: [`Fast`, `High`, `Loud`, `Soft`],
+  },
+  {
+    question: `Which composer wrote "The Four Seasons"?`,
+    choices: [`Bach`, `Handel`, `Telemann`, `Vivaldi`],
+  },
+  {
+    question: `Which instrument typically carries the main melody in a classical orchestra?`,
+    choices: [`Cello`, `Bassoon`, `Trombone`, `Violin`],
+  },
+  {
+    question: `Which composer is famous for his symphonies numbered up to 104?`,
+    choices: [`Mozart`, `Beethoven`, `Schubert`, `Haydn`],
+  },
+  {
+    question: `What type of piece is a symphony?`,
+    choices: [`Solo piano work`, `Chamber duet`, `Choral piece`, `Large orchestral work`],
+  },
+  {
+    question: `Which composer wrote the ballet "The Nutcracker"?`,
+    choices: [`Stravinsky`, `Ravel`, `Prokofiev`, `Tchaikovsky`],
+  },
+];
 
 
-export {mathQuiz, animalQuiz, boardGameQuiz}
+export {mathQuiz, animalQuiz, boardGameQuiz, classicalMusicQuiz}

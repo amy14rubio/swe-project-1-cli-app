@@ -4,12 +4,11 @@ import path from 'node:path';
 export default function makeFileIO(filePath) {
   return {
     read: () => {
+      if (!fs.existsSync(filePath)) return [];
       try {
-        const data = fs.readFileSync(filePath, 'utf-8');
-        if (!data) return [];
-        return JSON.parse(data);
-      } catch (error) {
-        console.error("Error parsing JSON file:", error);
+        return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+      } catch (err) {
+        console.error('Failed to read JSON:', err);
         return [];
       }
     },

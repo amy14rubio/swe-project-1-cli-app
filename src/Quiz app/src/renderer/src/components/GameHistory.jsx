@@ -26,7 +26,7 @@ const [gameHistory, setGameHistory] = useState(null);
           maskSize: "100% 100%",
       }} 
         className="
-        text-2xl text-center w-full h-[12em] pt-[20px] pb-[10px] 
+        text-2xl text-center w-full max-h-[12em] pt-[20px] pb-[10px] 
         overflow-auto flow-root">
         {gameHistory.length > 0 ? (
           <div className="flex p-4">

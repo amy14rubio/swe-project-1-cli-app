@@ -69,7 +69,7 @@ function UserInputForm({ quizName, quizType, score, inputScreen, setInputScreen 
           }
         } else {
           currentHighscores.push({
-            name: name,
+            name: name || 'player',
             quizType: quizName,
             score: score,
             date: formatDate()

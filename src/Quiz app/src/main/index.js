@@ -56,9 +56,11 @@ app.whenReady().then(() => {
   })
 
   // Path to JSON file
-  const highScoresPath = path.join(app.getAppPath(), 'src/renderer/src/data/highscores.json');
-  const gameHistoryPath = path.join(app.getAppPath(), 'src/renderer/src/data/gameHistory.json');
+  const userDataDir = app.getPath('userData');
 
+  const highScoresPath = path.join(userDataDir, 'highscores.json');
+  const gameHistoryPath = path.join(userDataDir, 'gameHistory.json');
+  console.log(userDataDir)
   const highScoresIO = makeFileIO(highScoresPath);
   const gameHistoryIO = makeFileIO(gameHistoryPath);
 

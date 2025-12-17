@@ -263,5 +263,10 @@
     "quizType": "board game",
     "score": 80,
     "date": "12/13/25"
+  },
+  {
+    "quizType": "animal",
+    "score": 20,
+    "date": "12/13/25"
   }
 ]

@@ -3,7 +3,6 @@ import Quiz from './components/Quiz'
 import Results from './components/Results'
 import HighScores from './components/HighScores.jsx'
 import GameHistory from './components/GameHistory.jsx'
-// import "tailwindcss/tailwind.css"
 
 import { useState } from 'react'
 
