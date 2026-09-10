@@ -7,7 +7,9 @@ turned into an excuse to rebuild the same game logic across very different envir
 Three quiz categories (Math, Board Games, Animal Fun Facts), high scores, and game history, all
 three implementations share the same core idea even though the code isn't shared between them.
 
-**Live demo (web app):** [https://amys-quiz-app.web.app/](https://amys-quiz-app.web.app/)
+**Live demo (web app):** [https://amys-quiz-app.web.app](https://amys-quiz-app.web.app)
+
+<img width="1328" height="763" alt="Screenshot 2026-09-09 at 10 21 48 PM" src="https://github.com/user-attachments/assets/f5eba79c-f091-4280-8d29-8b0faaae235a" />
 
 
 ## What's Inside
