@@ -1,11 +1,8 @@
-# Quiz Game
+# Quiz App
 
-A trivia quiz game I've now built three times, once for each platform: a command-line version, an
-Electron desktop app, and a React web app. What started as a CLI assignment for JS fundamentals
-turned into an excuse to rebuild the same game logic across very different environments.
+One of my first projects, this quiz app became a project I kept building on as I grew my understanding of JavaScript and different development environments. I originally built it as a CLI assignment for JavaScript fundamentals, then challenged myself to rebuild the same idea as an Electron desktop app and finally as a React web app. Each version gave me an opportunity to learn, experiment, and apply what I had picked up along the way.
 
-Three quiz categories (Math, Board Games, Animal Fun Facts), high scores, and game history, all
-three implementations share the same core idea even though the code isn't shared between them.
+Four quiz categories (Math, Board Games, Animal Fun Facts, Classical Music), high scores, and game history, all three implementations share the same core idea even though the code isn't shared between them.
 
 **Live demo (web app):** [https://amys-quiz-app.web.app](https://amys-quiz-app.web.app)
 
