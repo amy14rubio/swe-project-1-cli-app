@@ -1,0 +1,14 @@
+[
+  {
+    "name": "amanda",
+    "quizType": "animal",
+    "score": 20,
+    "date": "12/13/25"
+  },
+  {
+    "name": "player1",
+    "quizType": "first quiz!",
+    "score": 10,
+    "date": "10/24/25"
+  }
+]
